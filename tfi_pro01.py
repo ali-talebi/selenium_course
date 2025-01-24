@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture(scope='function')
 def driver_interface() : 
     base_option = Options()
-    base_option.add_argument('--headless')
+    # base_option.add_argument('--headless')
     driver = webdriver.Chrome( options=base_option) 
     print("titile : " , driver.title)
     return driver 
@@ -61,5 +61,14 @@ def tfu_s1(driver_interface) :
     
     
     
-    
+def get2():
+    pass
+
+@pytest.mark.area
+def tfu_area(mocker):
+    # Use __name__ to patch the function defined in the current module
+    store = mocker.patch(f'{__name__}.get2', return_value={'s': 9})
+
+    print("*********************** store:", store , "////" , store.__dict__)
+    assert get2() == {'s': 9}  # Ensure the mocked function returns the mocked value
     
