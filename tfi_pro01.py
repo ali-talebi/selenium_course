@@ -1,5 +1,5 @@
 from selenium import webdriver 
-from webdriver_manager.chrome import ChromeDriverManager 
+# from webdriver_manager.chrome import ChromeDriverManager 
 from selenium.webdriver.common.by import By 
 from selenium.webdriver.common.keys import Keys 
 import pytest 
@@ -8,9 +8,9 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope='function')
 def driver_interface() : 
-    base_option = Options()
+    # base_option = Options()
     # base_option.add_argument('--headless')
-    driver = webdriver.Chrome( options=base_option) 
+    driver = webdriver.Chrome() 
     print("titile : " , driver.title)
     return driver 
 
@@ -71,4 +71,10 @@ def tfu_area(mocker):
 
     print("*********************** store:", store , "////" , store.__dict__)
     assert get2() == {'s': 9}  # Ensure the mocked function returns the mocked value
+
+@pytest.mark.linktext 
+def tfu_link_text(driver_interface):
+    driver_interface.get('https://github.com/ali-talebi?tab=repositories')
+    driver_interface.find_element('link text' , 'OLT_TEAM').click()
+    time.sleep(5)
     
