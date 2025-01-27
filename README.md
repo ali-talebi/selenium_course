@@ -1,0 +1,56 @@
+مثال: ارسال فرم با submit()
+
+<form id="loginForm" action="/login" method="post">
+    <input type="text" name="username" id="username">
+    <input type="password" name="password" id="password">
+    <button type="submit" id="submitButton">Login</button>
+</form>
+
+
+ارسال فرم با متد submit()
+در اینجا از متد submit() برای ارسال فرم استفاده می‌کنیم:
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# راه‌اندازی مرورگر
+driver = webdriver.Chrome()
+
+# باز کردن صفحه وب
+driver.get("http://example.com")
+
+# یافتن فیلدهای ورودی و پر کردن آن‌ها
+username = driver.find_element(By.ID, "username")
+password = driver.find_element(By.ID, "password")
+
+username.send_keys("test_user")
+password.send_keys("secure_password")
+
+# یافتن دکمه و ارسال فرم
+submit_button = driver.find_element(By.ID, "submitButton")
+submit_button.submit()  # ارسال فرم
+
+# بستن مرورگر
+driver.quit()
+
+
+
+نکات مهم
+تفاوت با click():
+
+اگر بخواهید روی دکمه کلیک کنید، از click() استفاده می‌کنید.
+اگر بخواهید فرم را مستقیماً ارسال کنید، از submit() استفاده می‌کنید.
+نیازی به دکمه submit ندارید:
+
+می‌توانید روی هر فیلد درون فرم (مثل فیلدهای ورودی) متد submit() را صدا بزنید، و کل فرم ارسال خواهد شد.
+
+مثال ارسال فرم بدون کلیک روی دکمه:
+
+username = driver.find_element(By.ID, "username")
+
+username.send_keys("test_user")
+
+# ارسال فرم از طریق فیلد ورودی
+username.submit()
+
+
