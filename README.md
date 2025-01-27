@@ -93,7 +93,8 @@ username.submit()
     <li> //tag[@attribute='...']/..</li> Parent 
     <li> //tag[@attribute='...']/tag[condition]</li> get child tag . This is Absolute xpath 
     <li> //tag[condition]//tag[condition] </li> search through children  , this is relation xpath 
-
+     //*[@class = 'login form']//*[@name='uname']/.. find parent 
+      //*[@class = 'login form']//*[@name='uname'] search childern 
     
     
 </ul>
