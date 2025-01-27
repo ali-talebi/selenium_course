@@ -88,10 +88,11 @@ username.submit()
 
 <ul>
     <li> //tag[@attribute = ' ... ' ] </li>
-    <li> //tag[@attribute = ' ... ' and @attribute=' ... ' ]</li>
-    <li> //tag[(@attribute = ' ... ' and @attribute=' ... ' ) and / or  (@attribute = ' ... ' and @attribute=' ... ' ) ]</li>
-
-    
+    <li> //tag[@attribute = ' ... ' and /or  @attribute=' ... ' ]</li>
+    <li> //tag[(@attribute = ' ... ' and / or  @attribute=' ... ' ) and / or  (@attribute = ' ... ' and @attribute=' ... ' ) ]</li>
+    <li> //tag[@attribute='...']/..</li> Parent 
+    <li> //tag[@attribute='...']/tag[condition]</li> get child tag 
+    <li> //tag[condition]//tag[condition] </li> search through children  
 
     
     
