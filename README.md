@@ -87,7 +87,12 @@ username.submit()
 <h3> XPATH Locator in Selenium </h3>
 
 <ul>
-    <li> //tag[@attribute = '' ] </li>
+    <li> //tag[@attribute = ' ... ' ] </li>
+    <li> //tag[@attribute = ' ... ' and @attribute=' ... ' ]</li>
+    <li> //tag[(@attribute = ' ... ' and @attribute=' ... ' ) and / or  (@attribute = ' ... ' and @attribute=' ... ' ) ]</li>
+
+    
+
     
     
 </ul>
