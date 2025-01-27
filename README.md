@@ -81,3 +81,13 @@ username.submit()
 این متد زمانی مفید است که بخواهید فرم‌ها را بدون کلیک کردن ارسال کنید.
 
 
+
+
+
+<h3> XPATH Locator in Selenium </h3>
+
+<ul>
+    <li> //tag[@attribute = '' ] </li>
+    
+    
+</ul>
