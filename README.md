@@ -95,6 +95,10 @@ username.submit()
     <li> //tag[condition]//tag[condition] </li> search through children  , this is relation xpath 
      //*[@class = 'login form']//*[@name='uname']/.. find parent 
       //*[@class = 'login form']//*[@name='uname'] search childern 
+    <li>//tag[condition][index]</li>
+    <li>(//tag[condition])[index]</li>
+    <li>//tag[tag[condition]]</li> like : //tr[td[text() = 'Actor']] 
+    <li>//tag[.//tag[condition]]</li> //tr[.//td[text() = 'Actor']]
     
     
 </ul>
