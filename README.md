@@ -99,6 +99,10 @@ username.submit()
     <li>(//tag[condition])[index]</li>
     <li>//tag[tag[condition]]</li> like : //tr[td[text() = 'Actor']] 
     <li>//tag[.//tag[condition]]</li> //tr[.//td[text() = 'Actor']]
+    <li>//tag[contains(@attribute , value )]</li> like : //*[contains(@id , 'name')] 
+    <li>//tag[]</li> like : //tr[td[last()]] 
+    <li>//*[starts-with(@attribute , value )]</li> like : //*[starts-with(@id , 'lna')] 
+    <li>//*[normalize-space(text()) = 'option 1']</li> remove space first and last 
     
     
 </ul>
