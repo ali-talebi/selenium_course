@@ -110,6 +110,17 @@ username.submit()
     //*[round(text()) = '430' ]
     //*[floar(text()) = '448' ] 
     //*[substring-before(text() , ':') = 'Username']
+    Axes 
+    <li>  find specific parent :  </li> like : //*[@id='uname']/parent::div[@class='login form'] or //*[@id='uname']/.. or //*[@id='uname']/parent::* 
+    <li> find total parent : </li> like : //tr[text() = 'Singer' ]/ancestor::* 
+    //tr[td[text() = 'Singer']]/ancestor::table 
+    //tr[td[text() = 'Singer']]/ancestor::table[@style='width:100%']
+    //*[@id='uname']/ancestor-or-self::*[@id='uname'] # search in ancestor and self 
+    //*[@id='uname']/ancestor::*[@id='uname'] # just search in ancestor 
+    //tbody//*[text() = 'Singer' ] or //tbody/descendant::*[text() = 'Singer' ] 
+    //*[@value='option 1']/following::*[@value='option 1']
+    
+    
     
     
 </ul>
