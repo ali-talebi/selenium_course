@@ -119,6 +119,11 @@ username.submit()
     <li>//*[@id='uname']/ancestor::*[@id='uname'] # just search in ancestor </li>
     <li>//tbody//*[text() = 'Singer' ] or //tbody/descendant::*[text() = 'Singer' ] </li>
     <li> //*[@value='option 1']/following::*[@value='option 1'] </li>
+    <li>//*[@id ='abcd123']/following-sibling::*[@value='option 2']</li> 
+    <li>//*[@id ='abcd123']/preceding-sibling::*</li> just some level before this 
+    <li>//*[@id ='abcd123']/preceding::*</li> all before this 
+
+    
     
     
     
