@@ -103,6 +103,13 @@ username.submit()
     <li>//tag[]</li> like : //tr[td[last()]] 
     <li>//*[starts-with(@attribute , value )]</li> like : //*[starts-with(@id , 'lna')] 
     <li>//*[normalize-space(text()) = 'option 1']</li> remove space first and last 
-    <li>//*[translate(@id , 'what data' , 'replaced data' )][</li>
+    <li>//*[translate(@id , 'what data' , 'replaced data' )]</li> like : //*[transalte('abcd' , 'b' , 'x' )] -> axcd 
+    //*[translate(text() , 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' , 'abcdefghijklmnopqrstuvwxyz' ) = 'option']
+    //*[normalize-space(translate(text() , 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' , 'abcdefghijklmnopqrstuvwxyz' ) )  = 'option 1'] 
+    //*[string-length(@id) = 4 ] 
+    //*[round(text()) = '430' ]
+    //*[floar(text()) = '448' ] 
+    //*[substring-before(text() , ':') = 'Username']
+    
     
 </ul>
